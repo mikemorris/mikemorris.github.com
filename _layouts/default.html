@@ -10,28 +10,31 @@
 
     <!-- Homepage CSS -->
     <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-
-    <!-- Typekit -->
-    <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
 
-    <div class="site">
+    <div class="wrapper">
       <div class="title">
         <a href="/">Michael Patrick Morris</a>
-        <a class="extra" href="/">home</a>
+        <a class="extra" href="/about">About</a>
+        <a class="extra" href="/blog">Blog</a>
+        <a class="extra" href="/cv">CV</a>
       </div>
+    </div>
+
+    <div class="wrapper">
 
       {{ content }}
 
-      <div class="footer">
-        <div class="contact">
-          <p>
-          <a href="http://github.com/mikemorris">github.com/mikemorris</a><br />
-          <a href="http://twitter.com/mmorri">twitter.com/mmorri</a><br />
-          </p>
-        </div>
+      <div id="sidebar">
+        <ul class="contact">
+          <li id="github">
+            <a class="icon" href="http://github.com/mikemorris">github.com/mikemorris</a>
+          </li>
+          <li id="twitter">
+            <a class="icon" href="http://twitter.com/mmorri">twitter.com/mmorri</a>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -48,5 +51,8 @@
        })();
      </script>
 
+    <!-- Raphael -->
+    <script src="vendor/raphael/raphael-min.js"></script>
+    <script src="js/icons.js"></script>
    </body>
  </html>
