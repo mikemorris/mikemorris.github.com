@@ -76,6 +76,7 @@ table {
 ul.posts {
   list-style-type: none;
   margin-bottom: 3em;
+  padding-bottom:1em;
   border-bottom: 1px solid #ddd;
 }
 
@@ -87,12 +88,12 @@ ul.posts.sites {
 }
 
   ul.posts li {
-    margin:0 0 3em 0;
+    margin:0 0 2em 0;
     line-height: 1.75em;
   }
 
   ul.posts li p {
-    margin:0;
+    margin:0 0 1em 0;
   }
 
   ul.posts span {
