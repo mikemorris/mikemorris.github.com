@@ -1,0 +1,31 @@
+---
+layout: default
+title: Michael Patrick Morris
+---
+
+<div id="cv">
+  <h1>Work Experience</h1>
+  <ul class="posts">
+    {% for post in site.categories.jobs %}
+    <li>
+      <h2>{{ post.job }}, {{ post.title }}</h2>
+      <h3>{{ post.start }} to {{ post.end }}</h3>
+      {{ post.content }}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h1>Education</h1>
+  <ul class="posts">
+    <li>
+      <h2>Bachelor of Science in Mass Communication, Towson University</h2>
+      <h3>June 2006 to January 2009</h3>
+      <p>Dual concentration in Advertising and Public Relations. Minor in Art.</p>
+    </li>
+    <li>
+      <h2>Boston College</h2>
+      <h3>September 2005 to May 2006</h3>
+      <p>Computer Science Major</p>
+    </li>
+  </ul>
+</div>
