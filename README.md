@@ -8,4 +8,8 @@ The following directories and their contents are copyright Michael Patrick Morri
 
 * _posts/
 
-All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please.
+The following directories contain third-party code and may be subject to copyright:
+
+* vendor
+
+SVN icons are MIT licensed by [Dmitry Baranovskiy](http://raphaeljs.com/icons/). All other directories and files are MIT licensed. Feel free to use the HTML and CSS as you please.
