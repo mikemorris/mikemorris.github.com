@@ -6,7 +6,6 @@ job: Web Developer
 start: July 2011
 end: June 2012
 published: true
-url: 'https://fleishmanhillard.com'
 link: 'https://fleishmanhillard.com'
 ---
 
