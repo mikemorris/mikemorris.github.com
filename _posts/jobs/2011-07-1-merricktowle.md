@@ -4,7 +4,7 @@ title: Merrick Towle Communications
 category: jobs
 job: Web Developer
 start: March 2010
-end: July 2011
+end: June 2011
 published: true
 link: 'https://www.merricktowle.com'
 ---
