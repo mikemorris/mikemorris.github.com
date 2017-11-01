@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1em;
+  color: #333;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h2 {
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h3 {
+  margin-bottom: 1em;
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #aaa;
+}
+
+.wrapper {
+  width: 40em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  position:relative;
+  text-align: justify;
+  line-height: 1.5em;
+
+  header {
+    margin: 2em 0;
+    font-size: 24px;
+    font-smoothing: antialiased;
+
+    a {
+      color: #444;
+
+      &:hover {
+        color:#aaa;
+      }
+
+      &.extra {
+        margin-left: 1em;
+        font-size: 16px;
+        text-transform: lowercase;
+      }
+    }
+  }
+  
+  .meta {
+    color: #aaa;
+  }
+
+  aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        margin-bottom: 1em;
+        display: inline-block;
+        float: right;
+
+        a {
+          padding: 4px;
+          border-radius: 32px;
+          color: #fff;
+          background-color: #ddd;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #aaa;
+          }
+
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  ul.posts {
+    list-style-type: none;
+    margin-bottom: 3em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+
+    li {
+      margin: 0 0 2em 0;
+      line-height: 1.75em;
+
+      p {
+        margin: 0 0 1em 0;
+      }
+
+      span {
+        margin-right: 1em;
+        color: #aaa;
+        font-size: 13px;
+      }
+    }
+
+    &.related li {
+      margin: 0;
+    }
+  }
+
+  footer {
+    padding-bottom: 3em;
+    font-size: 13px;
+  }
+}
+
