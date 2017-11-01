@@ -87,27 +87,26 @@ a:hover {
     left: 0;
 
     ul {
+      position: absolute;
+      top: 0;
+      right: 0;
       list-style-type: none;
 
       li {
         margin-bottom: 1em;
-        display: inline-block;
-        float: right;
+        padding: 4px;
+        border-radius: 100%;
+        background-color: #ddd;
+        transition: background-color 0.3s;
 
-        a {
-          padding: 4px;
-          border-radius: 32px;
-          color: #fff;
-          background-color: #ddd;
-          transition: background-color 0.3s;
+        &:hover {
+          background-color: #aaa;
+        }
 
-          &:hover {
-            background-color: #aaa;
-          }
-
-          img {
-            display: block;
-          }
+        svg {
+          width: 32px;
+          height: 32px;
+          display: block;
         }
       }
     }
