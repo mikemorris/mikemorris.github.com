@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>{{ page.title | default: site.author }}</title>
-    <meta name="author" content="{{ page.author | default: site.author }}" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" type="text/css" />
+    {% include meta.html %}
   </head>
   <body>
     <div class="wrapper">
@@ -42,14 +39,6 @@
       </aside>
     </div>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11747615-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-11747615-3');
-    </script>
+    {% include scripts.html %}
   </body>
 </html>
