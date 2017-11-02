@@ -1,39 +1,40 @@
 ---
 layout: default
-title: Michael Patrick Morris
 published: true
 ---
-
-<div id="cv">
+<section id="work">
   <h1>Work</h1>
-  <ul class="posts">
-    {% for post in site.categories.jobs %}
+  <ul>
+    {% assign jobs = site.work | sort: 'date' %}
+    {% for job in jobs reversed %}
     <li>
-      <h2>{{ post.job }}, <a href={{ post.link }} target="_blank">{{ post.title }}</a></h2>
-      <h3>{{ post.start }} to {{ post.end }}</h3>
-      {{ post.content }}
+      <h2>{{ job.title }}, <a href="{{ job.link }}" target="_blank">{{ job.org }}</a></h2>
+      <h3>{{ job.date | date: "%B %Y" }} to {{ job.end | date: "%B %Y" }}</h3>
+      {{ job.content }}
     </li>
     {% endfor %}
   </ul>
+</section>
 
+<section id="education">
   <h1>Education</h1>
-  <ul class="posts">
+  <ul>
+    {% assign schools = site.education | sort: 'date' %}
+    {% for school in schools reversed %}
     <li>
-      <h2>Bachelor of Science in Mass Communication, Towson University</h2>
-      <h3>June 2006 to January 2009</h3>
-      <p>Dual concentration in Advertising and Public Relations. Minor in Art.</p>
+      <h2>{% if school.degree %}{{ school.degree }}, {% endif %}<a href="{{ school.link }}" target="_blank">{{ school.name }}</a></h2>
+      <h3>{{ school.date | date: "%B %Y" }} to {{ school.end | date: "%B %Y" }}</h3>
+      {{ school.content }}
     </li>
-    <li>
-      <h2>Boston College</h2>
-      <h3>September 2005 to May 2006</h3>
-      <p>Computer Science Major</p>
-    </li>
+    {% endfor %}
   </ul>
-  
+</section>
+
+<section id="skills">
   <h1>Skills</h1>
-  <ul class="posts">
-    <li>
-      <p>Node.js, JavaScript, C++, git</p>
-    </li>
-  </ul>
-</div>
+  <p>
+    {% for skill in site.data.skills %}
+      {{ skill }}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </p>
+</section>

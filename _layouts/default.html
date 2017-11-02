@@ -2,16 +2,16 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>{{ page.title }}</title>
-    <meta name="author" content="Michael Patrick Morris" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <title>{{ page.title | default: site.author }}</title>
+    <meta name="author" content="{{ page.author | default: site.author }}" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" type="text/css" />
   </head>
   <body>
     <div class="wrapper">
       <header>
         <ul>
           <li>
-            <a href="/">Michael Patrick Morris</a>
+            <a href="/">{{ site.author }}</a>
           </li>
           <li>
             <a href="/cv">CV</a>
@@ -19,28 +19,30 @@
         </ul>
       </header>
 
-      {{ content }}
+      <main>
+        {{ content }}
+      </main>
 
       <aside>
         <ul>
           <li>
             <a class="icon" href="https://github.com/mikemorris" target="_blank">
               <svg>
-                <use href="/img/icons.svg#github"></use>
+                <use href="{{ site.baseurl }}/assets/images/icons.svg#github"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="icon" href="https://twitter.com/mmorri" target="_blank">
               <svg>
-                <use href="/img/icons.svg#twitter"></use>
+                <use href="{{ site.baseurl }}/assets/images/icons.svg#twitter"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="icon" href="https://www.linkedin.com/in/michaelpatrickmorris" target="_blank">
               <svg>
-                <use xlink:href="/img/icons.svg#linkedin"></use>
+                <use xlink:href="{{ site.baseurl }}/assets/images/icons.svg#linkedin"></use>
               </svg>
             </a>
           </li>

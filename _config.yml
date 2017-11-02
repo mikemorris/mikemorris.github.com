@@ -1,2 +1,7 @@
+author: Mike Morris
+
 permalink: pretty
-highlighter: rouge
+
+collections:
+  - work
+  - education

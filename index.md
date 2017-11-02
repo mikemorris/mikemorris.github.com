@@ -1,7 +1,5 @@
 ---
-layout: post
-title: About
-category: about
+layout: default
 published: true
 ---
 
