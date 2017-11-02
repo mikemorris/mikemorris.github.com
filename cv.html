@@ -5,11 +5,11 @@ published: true
 ---
 
 <div id="cv">
-  <h1>Work Experience</h1>
+  <h1>Work</h1>
   <ul class="posts">
     {% for post in site.categories.jobs %}
     <li>
-      <h2>{{ post.job }}, <a href={{ post.link }}>{{ post.title }}</a></h2>
+      <h2>{{ post.job }}, <a href={{ post.link }} target="_blank">{{ post.title }}</a></h2>
       <h3>{{ post.start }} to {{ post.end }}</h3>
       {{ post.content }}
     </li>
