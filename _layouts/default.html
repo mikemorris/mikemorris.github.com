@@ -14,7 +14,7 @@
             <a href="/">{{ site.author }}</a>
           </li>
           <li>
-            <a href="/cv">CV</a>
+            <a href="/cv/">CV</a>
           </li>
         </ul>
       </header>
@@ -25,27 +25,19 @@
 
       <aside>
         <ul>
+          {% for item in site.data.social %}
+          {% assign fragment = item.title | downcase %}
+          {% assign href = site.baseurl | append: '/assets/images/icons.svg#' | append: fragment %}
           <li>
-            <a class="icon" href="https://github.com/mikemorris" target="_blank">
+            <a class="icon" href="{{ item.link }}" target="_blank">
               <svg>
-                <use href="{{ site.baseurl }}/assets/images/icons.svg#github"></use>
+                <title>{{ item.title }}</title>
+                <use xlink:href="{{ href }}" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round" />
+                <use xlink:href="{{ href }}" fill="currentColor" />
               </svg>
             </a>
           </li>
-          <li>
-            <a class="icon" href="https://twitter.com/mmorri" target="_blank">
-              <svg>
-                <use href="{{ site.baseurl }}/assets/images/icons.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="icon" href="https://www.linkedin.com/in/michaelpatrickmorris" target="_blank">
-              <svg>
-                <use xlink:href="{{ site.baseurl }}/assets/images/icons.svg#linkedin"></use>
-              </svg>
-            </a>
-          </li>
+          {% endfor %}
         </ul>
       </aside>
     </div>
