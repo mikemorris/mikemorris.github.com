@@ -37,3 +37,12 @@ layout: default
     {% endfor %}
   </p>
 </section>
+
+<section id="learning">
+  <h1>Interested in Learning</h1>
+  <p>
+    {% for subject in site.data.learning %}
+      {{ subject }}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </p>
+</section>
