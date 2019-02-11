@@ -15,6 +15,11 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   line-height: 1.75rem;
+
+  @media print {
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+  }
 }
 
 h1 {
@@ -22,12 +27,20 @@ h1 {
   color: #333;
   font-size: 1.2rem;
   font-weight: normal;
+
+  @media print {
+    font-size: 1rem;
+  }
 }
 
 h2 {
   color: #333;
   font-size: 1.1rem;
   font-weight: 300;
+
+  @media print {
+    font-size: 0.9rem;
+  }
 }
 
 h3 {
@@ -35,6 +48,10 @@ h3 {
   color: #777;
   font-size: 0.9rem;
   font-weight: 300;
+
+  @media print {
+    font-size: 0.7rem;
+  }
 }
 
 p {
@@ -83,11 +100,19 @@ header {
       }
     }
   }
+
+  @media print {
+    display: none;
+  }
 }
 
 main, section {
   margin-bottom: 3rem;
   padding-bottom: 1rem;
+
+  @media print {
+    margin-bottom: 1.5rem;
+  }
 }
 
 section {
@@ -101,6 +126,10 @@ section {
 
   li {
     margin-bottom: 2rem;
+
+    @media print {
+      margin-bottom: 1.25rem;
+    }
   }
 }
 
@@ -126,5 +155,9 @@ aside {
       display: block;
       color: #444;
     }
+  }
+
+  @media print {
+    display: none;
   }
 }
