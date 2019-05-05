@@ -6,14 +6,19 @@
   <body>
     <div class="wrapper">
       <header>
-        <ul>
-          <li>
-            <a href="/">{{ site.author }}</a>
-          </li>
-          <li>
-            <a href="/cv/">CV</a>
-          </li>
-        </ul>
+        <h1>
+          <a href="/">{{ site.author }}</a>
+        </h1>
+        <h4>
+          <a href="mailto:{{site.email}}">{{ site.email }}</a>
+        </h4>
+        <nav>
+          <ul>
+            <li>
+              <a href="/cv/">CV</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <main>

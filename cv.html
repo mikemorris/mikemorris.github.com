@@ -2,13 +2,13 @@
 layout: default
 ---
 <section id="work">
-  <h1>Work</h1>
+  <h2>Work</h2>
   <ul>
     {% assign jobs = site.work | sort: 'date' %}
     {% for job in jobs reversed %}
     <li>
-      <h2>{{ job.title }}, <a href="{{ job.link }}" target="_blank">{{ job.org }}</a></h2>
-      <h3>{{ job.date | date: "%B %Y" }} to {{ job.end | date: "%B %Y" }}</h3>
+      <h3>{{ job.title }}, <a href="{{ job.link }}" target="_blank">{{ job.org }}</a></h3>
+      <h4>{{ job.date | date: "%B %Y" }} to {{ job.end | date: "%B %Y" }}</h4>
       {{ job.content }}
     </li>
     {% endfor %}
@@ -16,13 +16,13 @@ layout: default
 </section>
 
 <section id="education">
-  <h1>Education</h1>
+  <h2>Education</h2>
   <ul>
     {% assign schools = site.education | sort: 'date' %}
     {% for school in schools reversed %}
     <li>
-      <h2>{% if school.degree %}{{ school.degree }}, {% endif %}<a href="{{ school.link }}" target="_blank">{{ school.name }}</a></h2>
-      <h3>{{ school.date | date: "%B %Y" }} to {{ school.end | date: "%B %Y" }}</h3>
+      <h3>{% if school.degree %}{{ school.degree }}, {% endif %}<a href="{{ school.link }}" target="_blank">{{ school.name }}</a></h3>
+      <h4>{{ school.date | date: "%B %Y" }} to {{ school.end | date: "%B %Y" }}</h4>
       {{ school.content }}
     </li>
     {% endfor %}
@@ -30,7 +30,7 @@ layout: default
 </section>
 
 <section id="skills">
-  <h1>Skills</h1>
+  <h2>Skills</h2>
   <p>
     {% for skill in site.data.skills %}
       {{ skill }}{% unless forloop.last %}, {% endunless %}
@@ -39,7 +39,7 @@ layout: default
 </section>
 
 <section id="learning">
-  <h1>Interested in Learning</h1>
+  <h2>Interested in Learning</h2>
   <p>
     {% for subject in site.data.learning %}
       {{ subject }}{% unless forloop.last %}, {% endunless %}
