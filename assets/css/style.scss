@@ -102,6 +102,10 @@ a:hover {
   margin: 4rem auto 0;
   padding: 0 2rem 0 5rem;
   position: relative;
+
+  @media print {
+    margin-top: 1rem;
+  }
 }
 
 header {
@@ -130,11 +134,12 @@ header {
 }
 
 main, section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   padding-bottom: 1rem;
 
   @media print {
     margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -150,8 +155,12 @@ section {
   li {
     margin-bottom: 2rem;
 
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+
     @media print {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
   }
 }
