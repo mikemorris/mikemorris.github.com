@@ -69,6 +69,16 @@ h4 {
   }
 }
 
+h5 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+
+  @media print {
+    font-size: 0.7rem;
+  }
+}
+
 p {
   margin: 1rem 0;
 }
