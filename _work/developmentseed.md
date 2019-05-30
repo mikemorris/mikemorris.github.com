@@ -11,5 +11,6 @@ stack:
   - Backbone.js
   - Jekyll
   - GitHub API
+show_stack: true
 ---
 Collaborated with a designer to completely overhaul [Prose](http://prose.io), an open source content management tool for static web sites, to be the primary interface for editing content on [HealthCare.gov](https://www.healthcare.gov).
